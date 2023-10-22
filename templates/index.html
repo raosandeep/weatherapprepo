@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather App</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+  #weather-form {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    width: 300px;
+    text-align: center;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  button {
+    background-color: #00838f;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #006064;
+  }
+</style>
+</head>
+<body>
+
+<form id="weather-form" action="/weatherapp" method="POST">
+  <label for="city">City:</label>
+  <input type="text" name="city" id="city" placeholder="Enter city" required>
+  
+  <label for="units">Units:</label>
+  <select name="units" id="units" required>
+    <option value="metric">Metric</option>
+  </select>
+  
+  <label for="appid">API Key:</label>
+  <input type="text" name="appid" id="appid" placeholder="Enter API Key" required>
+  
+  <button type="submit">Get Weather</button>
+</form>
+
+</body>
+</html>
