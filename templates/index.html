@@ -52,6 +52,10 @@
 </head>
 <body>
 
+{% if error %}
+<p style="color: red;">{{ error }}</p>
+{% endif %}
+
 <form id="weather-form" action="/weatherapp" method="POST">
   <label for="city">City:</label>
   <input type="text" name="city" id="city" placeholder="Enter city" required>
